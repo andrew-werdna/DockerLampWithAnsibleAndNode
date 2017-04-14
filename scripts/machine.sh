@@ -31,7 +31,9 @@ if ! $aflag; then
   exit 1
 fi
 
-source ~/Documents/vendorsupplycentral/vimdocker/scripts/host_help.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source $DIR/host_help.sh
 found=$(docker-machine ls | grep $VM);
 ETC_HOSTS='/c/Windows/System32/drivers/etc/hosts'
 
