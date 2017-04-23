@@ -49,5 +49,7 @@ ADD ./apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 RUN cp /etc/php/7.1/cli/php.ini /usr/local/etc/php
 
 RUN a2enmod rewrite
+RUN /etc/init.d/apache2 restart
 
-ENTRYPOINT ["/etc/init.d/apache2", "start"]
+#ENTRYPOINT ["/etc/init.d/apache2", "start"]
+CMD /bin/bash
