@@ -11,7 +11,6 @@ ADD ./scripts/install_node.sh /tmp
 RUN apt-get update -y
 RUN apt-get install -y \
   curl \
-  vim \
   man \
   git \
   python-software-properties \
